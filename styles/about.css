@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    margin: 50px;
+}
+.logo{
+    width: 300px;
+    height: 250px;
+    margin-top: -90px;
+}
+nav{
+    position: fixed;
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: x-large;
+    display: flex;
+    justify-content: flex-end; /* aligns links to the right */
+    gap: 20px;                 
+    width: 100%;
+    right: 40px;
+    top: 0;
+    padding: 10px 20px; 
+}
+a{
+    text-decoration: none;  
+    color: whitesmoke;
+    padding-bottom: 5px;       /* space for the underline */
+    border-bottom: 2px solid transparent; /* invisible by default */
+    transition: border-color 0.3s ease;   /* smooth effect */  
+}
+a:hover,
+a:focus,
+a:active {
+    border-bottom: 2px solid #ff5757; /* pink underline on hover/click */
+}
+nav a.active {
+  border-bottom: 2px solid #ff5757; /* keep pink underline on the active page */
+}
+
+.pic{width: 430px;
+    height: 530px;
+    position: fixed;
+    top: 130px;
+    left: 20px;
+  }
+  .about-info {
+    font-size: 20px;
+    color: whitesmoke;
+    position: relative;
+    margin-left: 38%;  
+    text-align: left;
+    margin-top: -90px;
+  }
+  .tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+  }
+  .tab-links {
+    margin-right: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+  }
+  .tab-links:hover,
+  .tab-links:focus,
+  .tab-links:active {
+    border-bottom: 2px solid #ff5757; /* pink underline on hover/click */
+}
+.tab-links.active-link {
+  border-bottom: 2px solid #ff5757; /* keep pink underline when active */
+}
+
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+.tab-contents ul li span {
+  color: #ff5757;
+  font-size: 18px;
+}
+.tab-contents{
+  display: none;
+}
+.tab-contents.active-tab{
+  display: block;
+}

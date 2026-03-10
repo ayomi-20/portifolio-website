@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    color:  rgb(9, 104, 141);
+    margin: 50px;
+}
+.logo{
+    width: 300px;
+    height: 250px;
+    margin-top: -90px;
+}
+
+nav{
+    position: fixed;
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: x-large;
+    display: flex;
+    justify-content: flex-end; /* aligns links to the right */
+    gap: 20px;                 
+    width: 100%;
+    right: 40px;
+    top: 0;
+    padding: 10px 20px; 
+}
+a{
+    text-decoration: none;  
+    color: whitesmoke;  
+    padding-bottom: 5px;       /* space for the underline */
+    border-bottom: 2px solid transparent; /* invisible by default */
+    transition: border-color 0.3s ease;   /* smooth effect */  
+}
+a:hover,
+a:focus,
+a:active {
+    border-bottom: 2px solid #ff5757; /* pink underline on hover/click */
+}
+nav a.active {
+  border-bottom: 2px solid #ff5757; /* keep pink underline on the active page */
+}
+
+.pic{width: 550px;
+    height: 550px;
+    position: fixed;
+    top: 120px;
+    right: 50px;
+  }
+span {
+    position: absolute;
+    margin-top: -20px;
+    font-weight: bold;
+    font-family: serif;
+    font-size: 45px;
+    left: 230px;
+    color: #ff5757;
+  }
+.note{
+    position: absolute;
+    margin-top: 80px;
+    top: 190px;
+    font-family: serif;
+    font-size: 35px;
+    color: whitesmoke;
+}
+/* #icon{
+    height: 150px;
+    width: 150px;
+} */
+.socialmedia{
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    top: 450px;
+    left: 90px;
+}
+.icon {
+    height: 25px;
+    width: 25px;
+}

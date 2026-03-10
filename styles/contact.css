@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    margin: 50px;
+    color: whitesmoke;
+}
+.logo{
+    width: 300px;
+    height: 250px;
+    margin-top: -90px;
+}
+nav{
+    position: fixed;
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: x-large;
+    display: flex;
+    justify-content: flex-end; /* aligns links to the right */
+    gap: 20px;                 
+    width: 100%;
+    right: 40px;
+    top: 0;
+    padding: 10px 20px; 
+}
+a{
+    text-decoration: none;  
+    color: whitesmoke;  
+    padding-bottom: 5px;       /* space for the underline */
+    border-bottom: 2px solid transparent; /* invisible by default */
+    transition: border-color 0.3s ease;   /* smooth effect */  
+}
+a:hover,
+a:focus,
+a:active {
+    border-bottom: 2px solid #ff5757; /* pink underline on hover/click */
+}
+nav a.active {
+  border-bottom: 2px solid #ff5757; /* keep pink underline on the active page */
+}
+
+.contact-left{
+  flex-basis: 35%;
+}
+.contact-right{
+  flex-basis: 60%;
+}
+.contact-left p{
+  margin-top: 30px;
+}
+.contact-left p i {
+  color: #ff004f;
+  margin-right: 15px;
+  font-size: 25px;
+}
+.social-icons{
+  margin-top: 30px;
+}
+.social-icons a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #ababab;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+.social-icons a:hover {
+  color: #ff004f;
+  transform: translateY(-5px);
+}
+.btn.btn2{
+  display: inline-block;
+  background-color: #ff004f;
+}

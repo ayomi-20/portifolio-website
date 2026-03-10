@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayomirwoth Peace</title>
+    <link rel="stylesheet" href="../styles/about.css">
+</head>
+<body>
+    <header>
+    <img src="../images/logo1.png" alt="logo" class="logo">
+    <nav>
+        <a href="../index.html">HOME</a>&nbsp;&nbsp;
+        <a href="../pages/about.html">ABOUT</a>&nbsp;&nbsp;
+        <a href="../pages/services.html">SERVICES</a>&nbsp;&nbsp;
+        <a href="./projects.html">PROJECTS</a>&nbsp;&nbsp;
+        <a href="../pages/contact.html">CONTACT</a>
+    </nav></header>
+    <img class="pic" src="../images/image.jpg" alt="picture">  
+    <div class="about-info">
+        I am a software developer with a Diploma in Computer science. <br>With nearly 2 years of experience, 
+        i have worked on a variety of projects such as web design, 
+        web application development, to do apps, content management systems, admin dashboards, 
+        application programing interfaces as well as graphics design among others.
+        <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+        </div>
+        <div class="tab-contents active-tab" id="skills">
+            <ul>
+                <li><span>Web Development</span> <br>Developing web Applications</li>
+                <li><span>App Development</span> <br>Developing mobile Applications</li>
+                <li><span>UI/UX Design</span> <br>Designing web/ mobile Applications interfaces</li>
+                <li><span>API Development</span> <br>Developing Application programming Interfaces for projects</li>
+                <li><span>Admin Dashboards</span> <br>Developing Admin dashboards for different API's</li>
+                <li><span>Graphic design</span> <br>Designing different graphics from logos, flyers and posters among others</li>
+            </ul>
+        </div>
+        <div class="tab-contents" id="experience">
+            <ul>
+                <li><span>JUN - AUG 2025</span> <br>Developing web Applications for Nyumbani construction works.</li>
+                <li><span>MAR - APRIL 2025</span> <br>Designing and developing a book management system</li>
+                <li><span>OCT - NOV 2024</span> <br>Developing my Portifolio Website</li>
+            </ul>
+        </div>
+        <div class="tab-contents" id="education">
+            <ul>
+                <li><span>2024 to Date</span> <br>Diploma in computer science at the women's institute of technology and innovation</li>
+                <li><span>2020 to 2023</span> <br>Uganda Advanced Certificate of Education at Luzira Secondary School</li>
+                <li><span>2017 to 2020</span> <br>Uganda Certificate of Education at Luzira Secondary School</li>
+                <li><span>2009 to 2016 <br></span> Primary Leaving Education at Murchison Bay Primary school </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        const navLinks = document.querySelectorAll("nav a");
+
+    // Highlight active link based on click
+    navLinks.forEach(link => {
+        link.addEventListener("click", function() {
+            // remove 'active' from all links
+            navLinks.forEach(l => l.classList.remove("active"));
+            // add 'active' to the clicked link
+            this.classList.add("active");
+        });
+    });
+
+    // ✅ Optional: keep highlight based on current page
+    const currentPage = window.location.pathname.split("/").pop();
+    navLinks.forEach(link => {
+        if (link.getAttribute("href").includes(currentPage)) {
+            link.classList.add("active");
+        }
+    });
+    </script>
+
+    <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        // remove active state from all tabs
+        for (let tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for (let tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        // add active state to the clicked tab
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+    </script>
+
+
+</body>
+</html>

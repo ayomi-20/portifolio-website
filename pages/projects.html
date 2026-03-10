@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayomirwoth peace</title>
+    <link rel="stylesheet" href="../styles/projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <img src="../images/logo1.png" alt="logo" class="logo">
+    <nav>
+        <a href="../index.html">HOME</a>&nbsp;&nbsp;
+        <a href="./about.html">ABOUT</a>&nbsp;&nbsp;
+        <a href="./services.html">SERVICES</a>&nbsp;&nbsp;
+        <a href="./projects.html">PROJECTS</a>&nbsp;&nbsp;
+        <a href="./contact.html">CONTACT</a></nav></header>
+        <div class="portifolio">
+            <div class="container">
+                <h1 class="sub-title">My work</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="../images/bookmanagementsystem.JPG" alt="work1">
+                        <div class="layer">
+                            <h3>Book Management System</h3>
+                            <p>The system allows you to add a book of your choice, 
+                                edit its details at any time,
+                                 add it to favorites and even delete it at your convenience</p>
+                                 <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="../images/homepagehero.JPG" alt="work2">
+                        <div class="layer">
+                            <h3>Construction Company Website</h3>
+                            <p>The website list's the company's products and services, 
+                                offering 24/7 accessibility to possible clients,
+                                 supporting client bookings for the available services.</p>
+                                 <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="../images/admindashboard.JPG" alt="work3">
+                        <div class="layer">
+                            <h3>Admin Dashboard</h3>
+                            <p>This is the administrative point for the company's administrators, 
+                                allowing them to efficiently monitor the entire system at large, 
+                                as well as confirm clients booking as business progresses.</p>
+                                 <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid">
+                <video width="600" autoplay loop muted>
+                    <source src="../images/Untitled video - Made with Clipchamp (1).mp4" type="video/mp4">
+                </video>
+                <!-- <div class="layer">
+                            <h3>Video Overview of Nyumbani Construction Works Website</h3>
+                            <p>The video displays some of the functions and functionalities of the website, 
+                                as well as the admin dashboard. It goes ahead to show the mobile- 
+                                responsiveness of the website even on a phone simulator despite being a web application.</p>
+                                 <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div> -->
+                </div>       
+            </div>
+        </div>
+
+    <script>
+        const navLinks = document.querySelectorAll("nav a");
+
+    // Highlight active link based on click
+    navLinks.forEach(link => {
+        link.addEventListener("click", function() {
+            // remove 'active' from all links
+            navLinks.forEach(l => l.classList.remove("active"));
+            // add 'active' to the clicked link
+            this.classList.add("active");
+        });
+    });
+
+    // ✅ Optional: keep highlight based on current page
+    const currentPage = window.location.pathname.split("/").pop();
+    navLinks.forEach(link => {
+        if (link.getAttribute("href").includes(currentPage)) {
+            link.classList.add("active");
+        }
+    });
+    </script>
+</body>
+</html>

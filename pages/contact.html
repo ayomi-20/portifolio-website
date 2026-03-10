@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayomirwoth Peace</title>
+    <link rel="stylesheet" href="../styles/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <img src="../images/logo1.png" alt="logo" class="logo">
+        <nav>
+        <a href="../index.html">HOME</a>&nbsp;&nbsp;
+        <a href="../pages/about.html">ABOUT</a>&nbsp;&nbsp;
+        <a href="../pages/services.html">SERVICES</a>&nbsp;&nbsp;
+        <a href="./projects.html">PROJECTS</a>&nbsp;&nbsp;
+        <a href="../pages/contact.html">CONTACT</a>
+        </nav>
+    </header>
+
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i> peaceayomirwoth@gmail.com</p>
+                    <p> <i class="fas fa-phone-square-alt"></i> 0780798798</p>
+                    <div class="social-icons">
+
+                        <a href="https://x.com/PeaceAyomirwoth" target="_self"><i class="fab fa-twitter-square"></i></a>
+                        <a href="https://www.linkedin.com/in/ayomirwoth-peace-aa4141315/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/ayomi-20"><i class="fab fa-github"></i></a>
+                    </div>
+                    <a href="" class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your name" required>
+                        <input type="email" name="Email" id="email" placeholder="Your email" required>
+                        <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        const navLinks = document.querySelectorAll("nav a");
+
+    // Highlight active link based on click
+    navLinks.forEach(link => {
+        link.addEventListener("click", function() {
+            // remove 'active' from all links
+            navLinks.forEach(l => l.classList.remove("active"));
+            // add 'active' to the clicked link
+            this.classList.add("active");
+        });
+    });
+
+    // ✅ Optional: keep highlight based on current page
+    const currentPage = window.location.pathname.split("/").pop();
+    navLinks.forEach(link => {
+        if (link.getAttribute("href").includes(currentPage)) {
+            link.classList.add("active");
+        }
+    });
+    </script>
+</body>
+</html>

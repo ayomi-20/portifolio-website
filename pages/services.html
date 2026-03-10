@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayomirwoth Peace</title>
+    <link rel="stylesheet" href="../styles/services.css">
+    <script src="https://kit.fontawesome.com/eb77a61608.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <img src="../images/logo1.png" alt="logo" class="logo">
+        <nav>
+        <a href="../index.html">HOME</a>&nbsp;&nbsp;
+        <a href="../pages/about.html">ABOUT</a>&nbsp;&nbsp;
+        <a href="../pages/services.html">SERVICES</a>&nbsp;&nbsp;
+        <a href="./projects.html">PROJECTS</a>&nbsp;&nbsp;
+        <a href="../pages/contact.html">CONTACT</a>
+        </nav>
+    </header>
+    <div class="services">
+        <div class="container">
+        <h1 class="sub-title">My services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Development</h2>
+                <p>
+                    I design and develop the best quality of web applictions, 
+                    making sure that clients are satisfied with the results delivered. <br>
+                    <a href="#">Learn more</a>
+                </p>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App Development</h2>
+                <p>
+                    I design and develop the quality Applications from mobile, desktop and cross-platform Apps, 
+                    making sure that every detail specified by the client is considered hence upholding clients satisfaction. <br>
+                    <a href="#">Learn more</a>
+                </p>
+            </div>
+            <div>
+                <i class="fa-sharp fa-solid fa-crop-simple"></i>
+                <h2>UI/UX Design</h2>
+                <p>
+                    What drives me to perfection is the zeal to uphold standard and quality UI/UX 
+                    designs as i work on projects. <br>
+                    <a href="#">Learn more</a>
+                </p>
+            </div>
+            
+        </div>
+        </div>
+    </div>
+    
+
+    <script>
+        const navLinks = document.querySelectorAll("nav a");
+
+    // Highlight active link based on click
+    navLinks.forEach(link => {
+        link.addEventListener("click", function() {
+            // remove 'active' from all links
+            navLinks.forEach(l => l.classList.remove("active"));
+            // add 'active' to the clicked link
+            this.classList.add("active");
+        });
+    });
+
+    // ✅ Optional: keep highlight based on current page
+    const currentPage = window.location.pathname.split("/").pop();
+    navLinks.forEach(link => {
+        if (link.getAttribute("href").includes(currentPage)) {
+            link.classList.add("active");
+        }
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayomirwoth Peace</title>
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <img src="./images/logo1.png" alt="logo" class="logo">
+    <nav>
+        <a href="./index.html">HOME</a>&nbsp;&nbsp;
+        <a href="./pages/about.html">ABOUT</a>&nbsp;&nbsp;
+        <a href="./pages/services.html">SERVICES</a>&nbsp;&nbsp;
+        <a href="./projects.html">PROJECTS</a>&nbsp;&nbsp;
+        <a href="./pages/contact.html">CONTACT</a>
+    </nav></header>
+    <br><br>
+    <img class="pic" src="./images/lovely me.jpg" alt="picture of me">
+    <span>Software Developer</span>
+    <div class="note"><br>
+    Hi I'm Peace,<br> a passionate developer practicing both frontend and <br> backend programming as well as graphic design</div>
+    <div class="socialmedia">
+    <a href="https://x.com/PeaceAyomirwoth" target="_self">
+        <img src="./images/twitter.JPG" class="icon" alt="twitter">
+    </a>&emsp;&emsp;&emsp;&emsp;&emsp;
+    <a href="https://www.linkedin.com/in/ayomirwoth-peace-aa4141315/">
+        <img src="./images/linkedin.JPG" class="icon" alt="linkedin">
+    </a>&emsp;&emsp;&emsp;&emsp;&emsp;
+    <a href="https://github.com/ayomi-20">
+       <img src="./images/git.JPG" class="icon" alt="github">
+    </a>
+    </div>
+
+    <script>
+        const navLinks = document.querySelectorAll("nav a");
+
+    // Highlight active link based on click
+    navLinks.forEach(link => {
+        link.addEventListener("click", function() {
+            // remove 'active' from all links
+            navLinks.forEach(l => l.classList.remove("active"));
+            // add 'active' to the clicked link
+            this.classList.add("active");
+        });
+    });
+
+    // ✅ Optional: keep highlight based on current page
+    const currentPage = window.location.pathname.split("/").pop();
+    navLinks.forEach(link => {
+        if (link.getAttribute("href").includes(currentPage)) {
+            link.classList.add("active");
+        }
+    });
+    </script>
+</body>
+</html>
