@@ -2,57 +2,52 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
 }
-
 body{
-    background: #000;
-    color: #fff;
-    padding: 0 50px;
+    background-color: black;
+    color:  rgb(9, 104, 141);
+    margin: 50px;
 }
-
-/* ---------------- HEADER ---------------- */
-
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 10px;
-}
-
 .logo{
-    width: 250px;
-    height: 200px;
-    object-fit: contain;
+    width: 300px;
+    height: 250px;
+    margin-top: -90px;
 }
-
-/* ---------------- NAVIGATION ---------------- */
 
 nav{
-    display: flex;
-    gap: 25px;
-    font-size: 20px;
+    position: fixed;
+    margin-top: 30px;
     font-weight: bold;
+    font-size: x-large;
+    display: flex;
+    justify-content: flex-end; /* aligns links to the right */
+    gap: 20px;                 
+    width: 100%;
+    right: 40px;
+    top: 0;
+    padding: 10px 20px; 
+}
+a{
+    text-decoration: none;  
+    color: whitesmoke;  
+    padding-bottom: 5px;       /* space for the underline */
+    border-bottom: 2px solid transparent; /* invisible by default */
+    transition: border-color 0.3s ease;   /* smooth effect */  
+}
+a:hover,
+a:focus,
+a:active {
+    border-bottom: 2px solid #ff5757; /* pink underline on hover/click */
+}
+nav a.active {
+  border-bottom: 2px solid #ff5757; /* keep pink underline on the active page */
 }
 
-nav a{
-    text-decoration: none;
-    color: white;
-    padding-bottom: 5px;
-    border-bottom: 2px solid transparent;
-    transition: 0.3s ease;
-}
-
-nav a:hover,
-nav a.active{
-    color: #ff004f;
-    border-bottom: 2px solid #ff004f;
-}
 
 /* ---------------- CONTACT SECTION ---------------- */
 
 #contact{
-    padding: 50px 0;
+    padding: 5px 0;
 }
 
 .container{
@@ -73,9 +68,9 @@ nav a.active{
 }
 
 .sub-title{
-    font-size: 55px;
-    margin-bottom: 20px;
-    /* color: #ff004f; */
+    font-size: 45px;
+    margin-top: -60px;
+    color: white;
 }
 
 .contact-left p{
